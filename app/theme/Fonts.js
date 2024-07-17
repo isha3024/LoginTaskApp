@@ -5,5 +5,5 @@ export const fonts = {
   poppinsSemiBold: 'Poppins-SemiBold', // 600
   poppinsBold: 'Poppins-Bold', // 700
   poppinsExBold: 'Poppins-ExBold', // 800
-  robotoBoldItalic: 'Roboto-BoldItalic'
+  robotoRegualr: 'Roboto-Regular'
 };

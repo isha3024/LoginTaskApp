@@ -9,6 +9,7 @@ import { images, size } from '../../theme'
 
 const DemoScreen = () => {
 
+
   const [emailValue, setEmailValue] = useState('');
   const inputEmailRef = useRef(emailValue);
   useEffect(() => {
@@ -28,7 +29,8 @@ const DemoScreen = () => {
       <Image source={images.imgGlubyLogo} width={size.moderateScale(200)} height={size.moderateScale(100)} />
       <Title title={'Masuk'}/>
       <InputText label='Masukan Email' placeholder='Email' keyboardType='email-address' onChangeText={inputValueHandler} value={emailValue}  />
-      <PrimaryButton btnLabel='Masuk' onPress={resetInput} />
+      <InputText label='Masukan Password' placeholder='Password' keyboardType='default' secureTextEntry={true}/>
+      <PrimaryButton onPress={resetInput} title={'Masuk'}/>
     </View>
   )
 }

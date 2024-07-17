@@ -8,6 +8,7 @@ import {color} from '../../theme';
 const InputText = ({
   value,
   label,
+  customStyle,
   placeholder,
   keyboardType,
   placeholderTextColor,
@@ -22,18 +23,21 @@ const InputText = ({
 }) => {
 const [focus, setFocus] = useState(false);
   return (
-    <View style={styles.mainContainer()}>
+    <View style={[styles.mainContainer(), customStyle]}>
       <Text style={styles.label()}>{label}</Text>
       <TextInput
         value={value}
-        style={[styles.input(), focus ? styles.focused() : styles.input()]}
+        style={[focus ? styles.focused() : styles.input()]}
         placeholder={placeholder}
-        placeholderTextColor={color.semiTransBlack}
+        placeholderTextColor={placeholderTextColor ?? color.placeholderColor}
         onChange={onChange}
         onChangeText={onChangeText}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
         keyboardType={keyboardType}
+        secureTextEntry={secureTextEntry}
+        maxLength={maxLength}
+        minLength={minLength}
         {...props}
       />
     </View>

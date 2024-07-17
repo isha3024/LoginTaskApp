@@ -14,5 +14,5 @@ export const images = {
   imgAppNewLogo: require('./image/images/chandukaka.png'),
   ImgProfilePhoto: require('./image/images/ImgProfilePhoto.png'),
   ImgCheck: require('./image/images/ImgCheck.png'),
-  imgGlubyLogo: require('./image/images/glubyLogo.png')
+  imgGlubyLogo: require('./image/images/glubylogo.png')
 };

@@ -3,7 +3,6 @@ import {color, size} from '../../theme';
 export const mainView = () => ({
   flex: 1,
   backgroundColor: color.white,
-  paddingHorizontal: size.moderateScale(40)
 });
 export const btnContainer = () => ({
   paddingHorizontal: size.moderateScale(20),

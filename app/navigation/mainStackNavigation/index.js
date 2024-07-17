@@ -1,44 +1,32 @@
-import {NavigationContainer} from '@react-navigation/native';
-import {
-  CardStyleInterpolators,
-  createStackNavigator,
-} from '@react-navigation/stack';
 import React, {useEffect, useState} from 'react';
-import DemoScreen from '../../screens/demoScreen';
-import RegisterScreen from '../../screens/registerScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator} from '@react-navigation/stack';
+import { AuthStackNavigation } from '../authStackNavigation';
+import SplashScreen from '../../screens/spalshScreen';
 
 
 const Stack = createStackNavigator();
 
 export const MainStackNavigation = () => {
-  // const [showSplashScreen, setHideSplashScreen] = useState(true);
-  // useEffect(() => {
-  //   // localStorageValueGet();
-  //   setTimeout(() => {
-  //     setHideSplashScreen(false);
-  //   }, 3000);
-  // }, []);
+
+  const [showsplashScreen, setHideSplashScreen] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setHideSplashScreen(false);
+    }, 3000)
+  }, []);
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        {/* {showSplashScreen ? (
-          <Stack.Screen
-            name="splashScreen"
-            component={SplashScreen}
-            options={{
-              headerShown: false,
-              cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-            }}
-          />
-        ) : null} */}
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {
+          showsplashScreen ? (
+            <Stack.Screen name='Splash' component={SplashScreen}/>
+          ): null
+        }
         <Stack.Screen
-          name="registerScreen"
-          component={DemoScreen}
-          options={{
-            headerShown: false,
-            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-          }}
+          name="AuthStack"
+          component={AuthStackNavigation}
         />
       </Stack.Navigator>
     </NavigationContainer>

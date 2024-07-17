@@ -10,7 +10,8 @@ export const mainBtnContainer = () => ({
 
 export const btnText = () => ({
   textAlign: 'center',
-  fontSize: fontSize.middleSmallMedium,
+  fontSize: fontSize.medium,
   fontFamily: fonts.poppinsSemiBold,
+  letterSpacing: size.moderateScale(2),
   color: color.white
 })

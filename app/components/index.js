@@ -1,3 +1,4 @@
 export * from './text';
-export * from './button';
+export * from './inputText';
 export * from './screen';
+export * from './btnPrimary'

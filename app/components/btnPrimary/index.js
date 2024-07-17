@@ -4,11 +4,14 @@ import React from 'react'
 
 import * as styles from './styles'
 
-const PrimaryButton = ({btnLabel, onPress}) => {
+const PrimaryButton = ({title, activeOpacity, onPress, disabled, customStyle}) => {
   return (
-    
-    <TouchableOpacity onPress={onPress} style={styles.mainBtnContainer()} activeOpacity={0.8}>
-      <Text style={styles.btnText()}>{btnLabel}</Text>
+    <TouchableOpacity 
+      onPress={onPress} 
+      style={[styles.mainBtnContainer(), customStyle]} 
+      activeOpacity={activeOpacity ?? 0.8}
+      disabled={disabled}>
+      <Text style={styles.btnText()}>{title}</Text>
     </TouchableOpacity>
   )
 }
