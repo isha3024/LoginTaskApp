@@ -5,7 +5,7 @@ import {Text} from '../text';
 import * as styles from './styles';
 import {color} from '../../theme';
 
-const InputText = ({
+export const InputText = ({
   value,
   label,
   customStyle,
@@ -44,4 +44,3 @@ const [focus, setFocus] = useState(false);
   );
 };
 
-export default InputText;

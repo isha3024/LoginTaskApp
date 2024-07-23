@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator} from '@react-navigation/stack';
+import { SplashScreen } from '../../screens';
 import { AuthStackNavigation } from '../authStackNavigation';
-import SplashScreen from '../../screens/spalshScreen';
 
 
 const Stack = createStackNavigator();
@@ -13,20 +13,20 @@ export const MainStackNavigation = () => {
   useEffect(() => {
     setTimeout(() => {
       setHideSplashScreen(false);
-    }, 3000)
+    }, 1000)
   }, []);
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {
-          showsplashScreen ? (
+          showsplashScreen && (
             <Stack.Screen name='Splash' component={SplashScreen}/>
-          ): null
+          )
         }
         <Stack.Screen
           name="AuthStack"
-          component={AuthStackNavigation}
+          component={ AuthStackNavigation }
         />
       </Stack.Navigator>
     </NavigationContainer>

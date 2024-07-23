@@ -1,10 +1,10 @@
-import { View, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import { Text } from '../text'
 import React from 'react'
 
 import * as styles from './styles'
 
-const PrimaryButton = ({title, activeOpacity, onPress, disabled, customStyle}) => {
+export const PrimaryButton = ({title, activeOpacity, onPress, disabled, customStyle}) => {
   return (
     <TouchableOpacity 
       onPress={onPress} 
@@ -15,5 +15,3 @@ const PrimaryButton = ({title, activeOpacity, onPress, disabled, customStyle}) =
     </TouchableOpacity>
   )
 }
-
-export default PrimaryButton

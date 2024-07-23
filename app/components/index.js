@@ -1,4 +1,7 @@
-export * from './text';
+export * from './btnPrimary';
 export * from './inputText';
 export * from './screen';
-export * from './btnPrimary'
+export * from './loader';
+export * from './text';
+export * from './title';
+

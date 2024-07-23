@@ -1,15 +1,13 @@
 import React from 'react'
-import { View } from 'react-native'
-import { Text } from '../../components'
+import { Image, View } from 'react-native'
 
+import { images, size } from '../../theme'  
 import * as styles from './styles'
 
-const SplashScreen = () => {
+export const SplashScreen = () => {
   return (
     <View style={styles.splash()}>
-      <Text style={styles.splashText()}>SplashScreen</Text>
+      <Image source={images.imgGlubyLogo} width={size.moderateScale(100)} height={size.moderateScale(100)} />
     </View>
   )
 }
-
-export default SplashScreen

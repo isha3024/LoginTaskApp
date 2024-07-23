@@ -1,21 +1,12 @@
 import React from 'react'
-import {
-  Image,
-  View,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  ScrollView,
-} from 'react-native';
-
-import * as styles from './styles';
-import {images} from '../../theme';
-import Title from '../../components/title/index';
-import InputText from '../../components/inputText/index';
-import PrimaryButton from '../../components/btnPrimary/index';
-import {Text} from '../../components/text/index';
+import { Image, View } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const ForgetPassword = () => {
+import { InputText, PrimaryButton, Text, Title } from '../../components'; 
+import { images } from '../../theme';
+import * as styles from './styles'; 
+
+export const ForgetPassword = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.rootContainer()}>
@@ -46,5 +37,3 @@ const ForgetPassword = () => {
         </View>
   )
 }
-
-export default ForgetPassword

@@ -1,16 +1,12 @@
 import React from 'react'
 import { View, Image, TouchableOpacity, KeyboardAvoidingView, ScrollView } from 'react-native'
-
-import { Screen } from '../../components/screen/index'
-import PrimaryButton from '../../components/btnPrimary'
-import InputText from '../../components/inputText'
-import { Text } from '../../components/text/index'
-import Title from '../../components/title'
-import { images } from '../../theme'
-import * as styles from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-const RegisterScreen = () => {
+import { images } from '../../theme'
+import * as styles from './styles'
+import { InputText, PrimaryButton, Text, Title } from '../../components'
+
+export const RegisterScreen = () => {
   const navigation = useNavigation();
   return (
     <KeyboardAvoidingView
@@ -63,5 +59,3 @@ const RegisterScreen = () => {
     </KeyboardAvoidingView>
   )
 }
-
-export default RegisterScreen
